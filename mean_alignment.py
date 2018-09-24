@@ -71,11 +71,6 @@ def one_sided_mean(reducedDistMat):
     """
     L, M = np.shape(reducedDistMat)
     dtwM = np.zeros((L + 1, M + 1))
-    
-    for m in xrange(M + 1):
-        dtwM[0, m] = 0
-    for l in xrange(L + 1):
-        dtwM[l, 0] = 0
         
     dtwM[1,1] = reducedDistMat[0,0]
 
